@@ -1,0 +1,47 @@
+:root {
+    --ff: 'Montserrat', sans-serif;
+
+    // Accent
+    --clr-accent-light: #62c672;
+    --clr-accent-main: #3e9d4d;
+    --clr-accent-dark: #2a7135;
+    --clr-accent-dark-rbg: 42, 113, 53;
+
+    // Light
+    --clr-light-white: #f5f5f5;
+    --clr-light-gray-d3: #d3d3d3;
+    --clr-light-gray-80: #808080;
+    --clr-light-gray-dark: #404040;
+
+    // Dark
+    --clr-dark-main: #121413;
+    --clr-dark-light: #212624;
+
+    --clr-dark: #233039;
+    --clr-gray: #a0a5a9;
+    --clr-gray-dark: #4a5054;
+    --clr-black-white: #1c1c1e;
+    --clr-gray-e5: #e5e5e5;
+    --clr-orange: #ea971b;
+    --clr-orange-main: #e6501f;
+    --clr-orange-main-dark: #b2350d;
+    --clr-orange-bg: #fefaf7;
+    --clr-orange-bg-dark: #fbe9db;
+    --clr-white: #ffffff;
+
+    --clr-body: var(--clr-light-gray-d3);
+
+    --pd-body-left: 156px;
+}
+
+@media screen and (max-width: 1439px) {
+    :root {
+        --pd-body-left: 94px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    :root {
+        --pd-body-left: 16px;
+    }
+}
