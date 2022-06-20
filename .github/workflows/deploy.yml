@@ -45,5 +45,5 @@ jobs:
         run: ssh-keyscan -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
 
       - name: Deploy with rsync
-        run: cd dist && rsync -e "ssh -i $HOME/runner/.ssh/key -o StrictHostKeyChecking=no" --archive --compress . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
+        run: rsync -avz -e "ssh -i $HOME/runner/.ssh/key -o StrictHostKeyChecking=no" ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
         # run: cd dist && rsync -ac -e "ssh -p ${{ secrets.SSH_USER }}" ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
