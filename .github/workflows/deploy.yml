@@ -23,7 +23,7 @@ on:
 #       - run: npm ci
 #       - run: npm run build
 #       # Deploy
-#       - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
+#       - run: cd dist && rsync -e "ssh -i $HOME/runner/.ssh/key -o StrictHostKeyChecking=no" --archive --compress . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
 
 jobs:
   build-and-deploy:
@@ -33,7 +33,7 @@ jobs:
       - uses: actions/setup-node@v3
 
       - run: npm install
-      - run: npm run build
+        run: npm run build
 
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2
@@ -41,8 +41,9 @@ jobs:
           key: ${{ secrets.KEY }}
           known_hosts: unnecessary
 
-      # - name: Adding Known Hosts
-      #   run: ssh-keyscan -p ${{ secrets.SSH_USER}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
 
       - name: Deploy with rsync
-        run: cd dist && rsync -ac -e "ssh -p ${{ secrets.SSH_USER }}" ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
+        run: cd dist && rsync -e "ssh -i $HOME/runner/.ssh/key -o StrictHostKeyChecking=no" --archive --compress . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
+        # run: cd dist && rsync -ac -e "ssh -p ${{ secrets.SSH_USER }}" ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
