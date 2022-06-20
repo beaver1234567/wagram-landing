@@ -3,25 +3,46 @@ name: Deploy
 on:
   push:
     branches: [main]
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         node-version: [16.x]
+#     steps:
+#       - uses: actions/checkout@v3
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version: ${{ matrix.node-version }}
+#       # Setup key
+#       - run: set -eu
+#       - run: mkdir "$HOME/.ssh"
+#       - run: echo "${{ secrets.key }}" > "$HOME/.ssh/SSH"
+#       - run: chmod 600 "$HOME/.ssh/key"
+#       # Build
+#       - run: npm ci
+#       - run: npm run build
+#       # Deploy
+#       - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      # Setup key
-      - run: set -eu
-      - run: mkdir "$HOME/.ssh"
-      - run: echo "${{ secrets.key }}" > "$HOME/.ssh/SSH"
-      - run: chmod 600 "$HOME/.ssh/key"
-      # Build
-      - run: npm ci
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+
+      - run: npm install
       - run: npm run build
-      # Deploy
-      - run: cd dist && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
+
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.KEY }}
+          known_hosts: unnecessary
+
+      - name: Adding Known Hosts
+        run: ssh-keyscan -p ${{ secrets.SSH_USER}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
+
+      - name: Deploy with rsync
+        run: cd dist && rsync -ac -e "ssh -p ${{ secrets.SSH_USER }}" ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
