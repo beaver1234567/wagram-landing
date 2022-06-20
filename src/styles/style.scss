@@ -300,14 +300,14 @@
 // Slider
 
 .containerSlider {
-    padding-bottom: 100px;
-    flex: 1 0 auto;
-    filter: drop-shadow(0px 40px 100px rgba(0, 0, 0, 0.1));
+    padding-bottom: 80px;
+    // flex: 1 0 auto;
+    filter: drop-shadow(0px 27px 124px rgba(0, 0, 0, 0.25));
 }
 
 @media screen and (max-width: 767px) {
     .containerSlider {
-        padding-bottom: 60px;
+        padding-bottom: 40px;
     }
 }
 
@@ -345,6 +345,81 @@
 
         .shadow__activity {
             width: 253px;
+        }
+    }
+}
+
+// Footer
+
+.footer {
+    --gap-block: 10px;
+
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-block);
+
+    width: 100%;
+    padding-bottom: 92px;
+
+    &__block {
+        flex-shrink: 0;
+        display: flex;
+        height: 200px;
+        gap: var(--gap-block);
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 280px;
+            box-shadow: inset 0 0 0 3px var(--clr-dark-light);
+        }
+
+        &::before {
+            border-radius: 100px 20px 20px 100px;
+        }
+
+        &::after {
+            border-radius: 20px 100px 100px 20px;
+        }
+
+        &-right::before,
+        &-left::after {
+            box-shadow: none;
+            background-color: var(--clr-dark-light);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &-left::after {
+            background-image: url(../assets/images/Candy.png);
+        }
+
+        &-right::before {
+            background-image: url(../assets/images/like.png);
+        }
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .footer__block-center {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer {
+        --gap-block: 5px;
+
+        padding-bottom: 48px;
+
+        &__block {
+            height: 100px;
+
+            &::before,
+            &::after {
+                width: 140px;
+            }
         }
     }
 }
