@@ -8,8 +8,7 @@
     "build": "webpack --mode production",
     "dev": "webpack serve --env development",
     "start": "node server.js",
-    "lint": "eslint src",
-    "prettier": "prettier  — write src/**/*.js"
+    "lint": "eslint src"
   },
   "author": "arni01",
   "license": "ISC",
@@ -31,6 +30,8 @@
     "editorconfig-checker": "^4.0.2",
     "eslint": "^8.17.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "html-loader": "^3.1.2",
     "postcss": "^8.4.14",
     "postcss-loader": "^7.0.0",
