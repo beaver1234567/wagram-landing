@@ -31,8 +31,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-
-      - run: npm install
+      # Build
+      - name: npm install and build
+        run: npm ci
         run: npm run build
 
       - name: Install SSH Key
