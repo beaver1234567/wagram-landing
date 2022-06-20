@@ -41,8 +41,8 @@ jobs:
           key: ${{ secrets.KEY }}
           known_hosts: unnecessary
 
-      - name: Adding Known Hosts
-        run: ssh-keyscan -p ${{ secrets.SSH_USER}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
+      # - name: Adding Known Hosts
+      #   run: ssh-keyscan -p ${{ secrets.SSH_USER}} -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
 
       - name: Deploy with rsync
         run: cd dist && rsync -ac -e "ssh -p ${{ secrets.SSH_USER }}" ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
