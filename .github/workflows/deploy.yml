@@ -3,27 +3,6 @@ name: Deploy
 on:
   push:
     branches: [main]
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-latest
-#     strategy:
-#       matrix:
-#         node-version: [16.x]
-#     steps:
-#       - uses: actions/checkout@v3
-#       - uses: actions/setup-node@v3
-#         with:
-#           node-version: ${{ matrix.node-version }}
-#       # Setup key
-#       - run: set -eu
-#       - run: mkdir "$HOME/.ssh"
-#       - run: echo "${{ secrets.key }}" > "$HOME/.ssh/SSH"
-#       - run: chmod 600 "$HOME/.ssh/key"
-#       # Build
-#       - run: npm ci
-#       - run: npm run build
-#       # Deploy
-#       - run: cd dist && rsync -e "ssh -i $HOME/runner/.ssh/key -o StrictHostKeyChecking=no" --archive --compress . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
 
 jobs:
   build-and-deploy:
@@ -46,4 +25,3 @@ jobs:
 
       - name: Deploy with rsync
         run: rsync -avz --delete -e "ssh"  ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
-        # run: cd dist && rsync -ac -e "ssh -p ${{ secrets.SSH_USER }}" ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/root/watrace-landing/dist/
