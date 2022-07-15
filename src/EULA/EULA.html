@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EULA</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                font-family: "Montserrat", sans-serif;
+            }
+
+            *,
+            *:before,
+            *:after {
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            :focus,
+            :active {
+                outline: none;
+            }
+
+            a:focus,
+            a:active {
+                outline: none;
+            }
+
+            nav,
+            footer,
+            header,
+            aside {
+                display: block;
+            }
+
+            html,
+            body {
+                height: 100%;
+                width: 100%;
+                font-size: 100%;
+                min-height: 100vh;
+                line-height: 1;
+                scroll-behavior: smooth;
+                text-rendering: optimizeSpeed;
+                font-size: 14px;
+                -ms-text-size-adjust: 100%;
+                -moz-text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
+            }
+
+            input,
+            button,
+            textarea {
+                font-family: inherit;
+            }
+
+            input::-ms-clear {
+                display: none;
+            }
+
+            button {
+                cursor: pointer;
+            }
+
+            button::-moz-focus-inner {
+                padding: 0;
+                border: 0;
+            }
+
+            a,
+            a:visited {
+                text-decoration: none;
+                color: #000;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+            ul li {
+                list-style: none;
+            }
+
+            img {
+                display: block;
+            }
+
+            article > * + * {
+                margin-top: 1em;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-size: inherit;
+                font-weight: 400;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                * {
+                    -webkit-animation-duration: 0.01ms !important;
+                    animation-duration: 0.01ms !important;
+                    -webkit-animation-iteration-count: 1 !important;
+                    animation-iteration-count: 1 !important;
+                    -webkit-transition-duration: 0.01ms !important;
+                    transition-duration: 0.01ms !important;
+                    scroll-behavior: auto !important;
+                }
+            }
+
+            html {
+                scrollbar-color: #29d3a7 #fff !important;
+                scrollbar-width: 5px !important;
+            }
+
+            ::-webkit-scrollbar {
+                width: 5px;
+                background: transparent;
+            }
+            ::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #29d3a7;
+                border-radius: 15px;
+                transition: all 0.3s ease-in-out 0;
+                width: 5px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                transition: all 0.3s ease-in-out 0;
+                background: #0d9c77;
+            }
+            .container__eula {
+                max-width: 1920px;
+                margin: 0 auto;
+                padding: 40px 108px;
+            }
+            .eula__main_text {
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 29px;
+                color: #191919;
+            }
+            .eula__subtitle_text {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 22px;
+                margin-top: 24px;
+                color: #191919;
+            }
+            .eula__title_text,
+            .eula__title_t {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 20px;
+                color: #191919;
+                margin-top: 16px;
+            }
+            .eula__title_t {
+                margin-top: 12px;
+            }
+            .eula__group {
+                margin-top: 10px;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                color: #191919;
+            }
+            .eula__link {
+                color: #359d9e !important;
+            }
+            .eula__line {
+                margin-top: 10px;
+            }
+            .eula__line_track {
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                padding-left: 18px;
+                color: #191919;
+                position: relative;
+            }
+            .eula__line_track::after {
+                position: absolute;
+                content: ".";
+                left: 5px;
+                top: -3px;
+            }
+            .eula__trace {
+                opacity: 0.1;
+                border: 1px solid #191919;
+                margin: 24px 0;
+            }
+            .eula__info,
+            .eula__company_name {
+                margin-top: 12px;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                color: #191919;
+            }
+            .eula__company_name {
+                margin-top: 0;
+            }
+            @media screen and (max-width: 1000px) {
+                .container__eula {
+                    max-width: 1920px;
+                    margin: 0 auto;
+                    padding: 28px 16px;
+                }
+            }
+            @media screen and (max-width: 425px) {
+                .eula__link:first-child {
+                    font-size: 10px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container__eula">
+            <h2 class="eula__main_text">END USER LICENCE AGREEMENT</h2>
+            <h3 class="eula__subtitle_text">Last update: June 21, 2022</h3>
+            <p class="eula__title_text">
+                ANY USE OF THE APPLICATION MEANS THAT YOU HAVE RE AD AND
+                UNDERSTOOD THE PROVISIONS OF THIS END USER LICENCE AGREEMENT
+                (HEREINAFTER – THE EULA) AND PRIVACY POLICY AND AGREE TO BE
+                BOUND BY THEM. PRIVACY POLICY IS AN INTEGRAL PART OF THE EULA.
+            </p>
+            <h2 class="eula__title_t">
+                WARNING: THE APPLICATION OFFERS IN-APP PURCHASES
+            </h2>
+            <h3 class="eula__subtitle_text">1. GENERAL PROVISIONS</h3>
+            <ul>
+                <li class="eula__group">
+                    1.1. Licensor – Asura Engineering Sp. z o.o.
+                </li>
+                <li class="eula__group">
+                    1.2. Application – an entertainment application for mobile
+                    devices “WaTrace”, an individual copyrighted work,
+                    available at the following URL:
+                    <a
+                        class="eula__link"
+                        href="link"
+                        >link</a
+                    >.
+                </li>
+                <li class="eula__group">
+                    1.3. Apple – Apple Inc., a California corporation with its
+                    principal place of business at 1, Infinite Loop, Cupertino,
+                    California 95014, U.S.A.
+                </li>
+                <li class="eula__group">
+                    1.4. App Store – an electronic store and its storefronts
+                    branded, and owned and/or controlled by Apple or an
+                    affiliate of Apple. App Store is used by the Licensor for
+                    distribution of the Application among users of Apple
+                    services.
+                </li>
+                <li class="eula__group">
+                    1.5. Account – a personal account of a user of Apple
+                    services, which is provided by Apple administration under
+                    the Apple Terms of Use. The Account is accessed with an
+                    Apple ID and a password.
+                </li>
+                <li class="eula__group">
+                    1.6. User – any person having an Account and using the
+                    Application. If the Account was provided for a fictitious
+                    person, the User shall be deemed to be the person that
+                    actually uses the Account of this fictitious person for
+                    accessing Apple services.
+                </li>
+                <li class="eula__group">
+                    1.7. Content – video and audio materials, images and texts,
+                    created by the Licensor for or in connection with the
+                    Application.
+                </li>
+                <li class="eula__group">
+                    1.8. Application Supplemental Functionality – software codes
+                    processed on an electronic device as a part of the
+                    Application and intended to provide the User with additional
+                    functions of the Application. The Application Supplemental
+                    Functionality operates in the form of temporary privileges
+                    given to the User for a fee.
+                </li>
+                <li class="eula__group">
+                    1.9. Legislation – legislation of the Republic of Poland.
+                </li>
+                <li class="eula__group">
+                    1.10. The Application is suitable for people of all ages
+                    including children. The Application does not contain any
+                    objectionable content.
+                </li>
+                <li class="eula__group">
+                    1.11. The User confirms that under the law of the state of
+                    his\her nationality he\she:
+                </li>
+                <div class="eula__line">
+                    <p class="eula__line_track">
+                        is eligible to conclude the EULA either himself\herself
+                        or with parental consent, given by a parent or a
+                        guardian;
+                    </p>
+                    <p class="eula__line_track">
+                        has obtained parental consent, given by a parent or a
+                        guardian for concluding the EULA (if necessary);
+                    </p>
+                    <p class="eula__line_track">
+                        has legal capacity necessary for exercising rights and
+                        performing duties under the EULA.
+                    </p>
+                </div>
+                <li class="eula__group">
+                    1.12. The Application is provided to the User “as is”. The
+                    Licensor does not give any warranties that the Application,
+                    including the Application Supplemental Functionality:
+                </li>
+                <div class="eula__line">
+                    <p class="eula__line_track">
+                        will function uninterrupted and without any errors;
+                    </p>
+                    <p class="eula__line_track">
+                        will always be available for download;
+                    </p>
+                    <p class="eula__line_track">
+                        will meet the User’s expectations.
+                    </p>
+                </div>
+                <li class="eula__group">
+                    1.13. The Licensor shall not be liable for personal injury,
+                    or any incidental, special, indirect or consequential
+                    damages whatsoever caused to the User (including, but not
+                    limited to, damage caused to the User’s property or
+                    proprietary rights) as the result of using the Application
+                    or inability to use the Application.
+                </li>
+                <li class="eula__group">
+                    1.14. The Licensor shall not be liable for any aspects of
+                    App Store functioning (prohibition of access, failures and
+                    breakdowns of App Store, etc.) or any actions taken by
+                    Apple.
+                </li>
+                <li class="eula__group">
+                    1.15. The Licensor grants the User a non-exclusive licence
+                    to use the Application and the Content free of charge.
+                </li>
+                <li class="eula__group">
+                    1.16. The Licensor provides the User with the right to use
+                    the Application Supplementary Functionality. The duty to
+                    provide the User with the right to use the Application
+                    Supplementary Functionality is considered performed after
+                    the respective amount of temporary additional privileges are
+                    given to the User for a fee. The User is entitled to cancel
+                    a payment using respective App Store functionality. When
+                    cancelling the payment the Licensor revokes additional
+                    privileges of the User that were previously given.
+                </li>
+            </ul>
+            <h3 class="eula__subtitle_text">
+                2. SUBSCRIPTIONS TERMS AND RENEWALS
+            </h3>
+            <ul>
+                <li class="eula__group">
+                    2.1 If you register to any of our recurring payment plans,
+                    you agree to pay all fees or charges to your account for the 
+                    Service in accordance with the fees, charges and billing 
+                    terms in effect at the time that each fee or charge is due
+                    and payable. Unless otherwise indicated in an order form, 
+                    you must provide us with a valid credit card (Visa, 
+                    MasterCard, or any other issuer accepted by us) (“Payment 
+                    Provider”) as a condition to signing up for the plan. Your
+                    Payment Provider agreement governs your use of the 
+                    designated credit card account, and you must refer to that 
+                    agreement and not these Terms to determine your rights and 
+                    liabilities with respect to your Payment Provider.  
+                    We reserve the right at any time to change its prices and 
+                    billing methods.
+                </li>                    
+            </ul>
+            <h3 class="eula__subtitle_text">
+                3. WARNING FOR PARENTS/GUARDIANS
+            </h3>
+            <ul>
+                <li class="eula__group">
+                    3.1. The User shall perform the EULA in good faith.
+                </li>
+                <li class="eula__group">
+                    3.2. The User is entitled to perform actions, covered by the
+                    technical capabilities or logics of the Application.
+                </li>
+                <li class="eula__group">
+                    3.3. The User is entitled to inquire the Licensor with
+                    regard to defective Application functioning (technical
+                    failures, etc.) if such defective functioning is not caused
+                    by the User’s actions; peculiarities of hardware and
+                    software used by the User; quality of the Internet
+                    connection; App Store operation, as well as other
+                    circumstances that the Licensor is not responsible for. The
+                    Users’ inquiries shall be sent to the e-mail:
+                    info@zetasolutions.io
+                </li>
+            </ul>
+            <h3 class="eula__subtitle_text">4. REFUND POLICY</h3>
+            <ul>
+                <li class="eula__group">
+                    4.1. For EU Users: The Licensor will, upon request, issue a
+                    refund for any title that is requested within 14 days of
+                    purchase. In case the User falls outside of the
+                    abovementioned refund rules, no refunds are available.
+                    Nonetheless the User may still submit a request for refund
+                    and the Licensor may (but under any circumstances is not
+                    obliged to) take a look at it.
+                </li>
+                <li class="eula__group">
+                    4.2. For Users outside EU: In case the User falls outside of
+                    the App Store refund rules, no refunds are available.
+                    Nonetheless the User may still submit a request for refund
+                    and the Licensor may (but under any circumstances is not
+                    obliged to) take a look at it.
+                </li>
+            </ul>
+            <h3 class="eula__subtitle_text">5. THE USER MUST NOT:</h3>
+            <ul>
+                <li class="eula__group">
+                    5.1 examine the Application source code, modify or amend it,
+                    create new works on its basis;
+                </li>
+                <li class="eula__group">
+                    5.2. mislead the Licensor (in particular over the
+                    personality of the User, his/her age, scope of legal
+                    capacity, etc.);
+                </li>
+                <li class="eula__group">
+                    5.3. provide third parties (including, but not limited to
+                    family members) with a possibility to access the Application
+                    with the User’s Account;
+                </li>
+                <li class="eula__group">
+                    5.4. provide third parties (including family members) with
+                    an opportunity to access the Application with the help of
+                    the User’s Account;
+                </li>
+                <li class="eula__group">
+                    5.5. use the Application in any way that interferes or may
+                    interfere with normal Application functioning;
+                </li>
+                <li class="eula__group">
+                    5.6. use bots (computer programs intended for performance of
+                    certain actions within the Application for the User), as
+                    well as any other computer programs and/or technical means
+                    that interfere with normal Application functioning and/or
+                    aimed at getting additional privileges within the
+                    Application, which are not provided for by the rules, logics
+                    or technical capabilities of the Application;
+                </li>
+                <li class="eula__group">
+                    5.7. make use of defects of the Application functioning
+                </li>
+            </ul>
+            <h3 class="eula__subtitle_text">6. THE LICENSOR IS ENTITLED TO:</h3>
+            <ul>
+                <li class="eula__group">
+                    6.1. limit the Application functionality fully or partially
+                    at his sole discretion (including, but not limited to
+                    deleting the Application from App Store). The Licensor is
+                    not obliged to notify the User of any limitation of
+                    functionality and is not liable for any damage caused to the
+                    User as the result of limitation of the Application
+                    functionality;
+                </li>
+                <li class="eula__group">
+                    6.2. process information about the User’s activity within
+                    the Application (including, but not limited to, actions
+                    taken within the Application, use of Application
+                    Supplementary Functionality);
+                </li>
+                <li class="eula__group">
+                    6.3. to change at his sole discretion any and all
+                    Application parameters, including without limitations:
+                </li>
+                <div class="eula__line">
+                    <p class="eula__line_track">
+                        logics and technical capabilities of the Application;
+                    </p>
+                    <p class="eula__line_track">
+                        ways to access the Application;
+                    </p>
+                    <p class="eula__line_track">
+                        the amount of fee to be paid for use of the Application
+                        Supplementary Functionality;
+                    </p>
+                </div>
+                <li class="eula__group">
+                    6.4. exercise other rights in accordance with the EULA and
+                    Legislation.
+                </li>
+            </ul>
+            <h3 class="eula__subtitle_text">
+                7. TRANSFER OF INFORMATION ABOUT CRIMES
+            </h3>
+            <ul>
+                <li class="eula__group">
+                    7.1. In case the Licensor learns about the User’s illegal
+                    activity, he has the right to inform law enforcement
+                    authorities about violations of the Legislation committed by
+                    the User and to pass to law enforcement authorities all
+                    available information about such violations. Should the
+                    Licensor receive a respective enquiry he is also entitled to
+                    pass such information to law enforcement authorities or
+                    other organizations that are eligible for obtaining such
+                    information under the Legislation.
+                </li>
+            </ul>
+            <h3 class="eula__subtitle_text">8. INTELLECTUAL PROPERTY</h3>
+            <ul>
+                <li class="eula__group">
+                    8.1. The Application and the Content are copyrighted works.
+                </li>
+                <li class="eula__group">
+                    8.2. The copyright for the Application and the Content
+                    belongs to the Licensor. All rights reserved.
+                </li>
+                <li class="eula__group">
+                    8.3. The Licensor grants the User a non-exclusive licence to
+                    use the Application as intended (to download, install and
+                    run the Application; to perform actions provided for by the
+                    technical capabilities and logics of the Application);
+                </li>
+                <li class="eula__group">
+                    8.4. The User is not allowed to use the Application in any
+                    other way, for example, to rent, lease, lend, upload to or
+                    host on any website or server, sell, redistribute,
+                    sublicense, copy, decompile, reverse engineer, disassemble,
+                    attempt to derive the source code of, modify, or create
+                    derivative works of the Application, any updates, or any
+                    part thereof.
+                </li>
+                <li class="eula__group">
+                    8.5. Any commercial use of the Application or the Content by
+                    the User is PROHIBITED.
+                </li>
+                <li class="eula__group">
+                    8.6. The User is not allowed to transfer this licence to any
+                    third party or sublicense third parties for use of the
+                    Application or Content. This licence also covers all updates
+                    and/or additional components of the Application or Content,
+                    which will be created and provided to the User in future.
+                </li>
+            </ul>
+            <h3 class="eula__subtitle_text">9. TERMINATION</h3>
+            <ul>
+                <li class="eula__group">
+                    9.1. The EULA is effective until terminated by the User or
+                    Licensor. The User’s rights under this EULA will terminate
+                    automatically without notice from the Licensor if the User
+                    fails to comply with any term(s) of this EULA. Upon
+                    termination of the EULA, the User shall cease all use of the
+                    Application, and destroy all copies thereof, both full and
+                    partial.
+                </li>
+                <li class="eula__group">
+                    9.2. The User agrees that the Licensor has the right to
+                    terminate this EULA unilaterally at any time at the sole
+                    discretion of the Licensor without notifying the User.
+                </li>
+            </ul>
+            <h3 class="eula__subtitle_text">10. FINAL PROVISIONS</h3>
+            <ul>
+                <li class="eula__group">
+                    10.1. The EULA and all annexes thereof are regulated by the
+                    law of the Republic of Poland.
+                </li>
+                <li class="eula__group">
+                    10.2. Invalidity of any provision of the EULA invalidates
+                    neither the EULA as a whole, nor other provisions thereof.
+                </li>
+                <li class="eula__group">
+                    10.3. All disputes arising out of the EULA (including, but
+                    not limited to disputes over the invalidity of the EULA, as
+                    well as disputes over interpretation and performance of the
+                    EULA) shall be settled by state courts of the Republic of Poland.
+                </li>
+                <li class="eula__group">
+                    10.4. If a dispute defined in clause 10.3 of the EULA is
+                    submitted to the court, the winning party is entitled to all
+                    reasonable damages connected to the court proceedings
+                    (including legal costs).
+                </li>
+                <li class="eula__group">
+                    10.5. Non-performance of any provision of the EULA either by
+                    the Licensor or by the User does not constitute a refusal to
+                    perform such provision at present or in future, nor does it
+                    deprive the other party of the right to demand performance
+                    of such provision.
+                </li>
+            </ul>
+            <hr class="eula__trace" />
+            <p class="eula__company_name">Asura Engineering Sp. z o.o.</p>
+            <p class="eula__info">
+                E-mail: watracers@gmail.com <br />
+            </p>
+            <p class="eula__info">© 2022 Asura Engineering Sp. z o.o.</p>
+        </div>
+    </body>
+</html>

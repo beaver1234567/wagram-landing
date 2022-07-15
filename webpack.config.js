@@ -53,12 +53,17 @@ module.exports = ({ development }) => ({
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src/index.html'),
         }),
+
+        new HtmlWebpackPlugin({
+            filename: './EULA/index.html',
+            template: path.join(__dirname, 'src/EULA/EULA.html'),
+        }),
+
         new CopyPlugin({
             patterns: [
                 { from: './src/assets/images/', to: 'public/images' },
                 { from: './src/assets/static/', to: '' },
                 { from: './src/app-ads.txt', to: '' },
-                // { from: "./src/EULA", to: "" },
             ],
         }),
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
